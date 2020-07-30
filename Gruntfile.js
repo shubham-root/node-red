@@ -452,6 +452,7 @@ module.exports = function(grunt) {
                     'packages/node_modules/@node-red/runtime/lib/index.js',
                     'packages/node_modules/@node-red/runtime/lib/api/*.js',
                     'packages/node_modules/@node-red/runtime/lib/events.js',
+                    'packages/node_modules/@node-red/runtime/lib/hooks.js',
                     'packages/node_modules/@node-red/util/**/*.js',
                     'packages/node_modules/@node-red/editor-api/lib/index.js',
                     'packages/node_modules/@node-red/editor-api/lib/auth/index.js'
@@ -623,7 +624,7 @@ module.exports = function(grunt) {
     grunt.registerTask('build',
         'Builds editor content',
         ['clean:build','jsonlint','concat:build','concat:vendor','copy:build','uglify:build','sass:build','attachCopyright']);
-        
+
     grunt.registerTask('build-dev',
         'Developer mode: build dev version',
         ['clean:build','concat:build','concat:vendor','copy:build','sass:build','setDevEnv']);
